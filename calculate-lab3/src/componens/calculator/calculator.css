@@ -1,0 +1,89 @@
+/* Container หลัก */
+.calculator-card {
+  width: 320px;
+  background-color: #f3f3f3; /* สีเทาอ่อนแบบ Windows */
+  border-radius: 8px;
+  padding: 4px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* ส่วนแสดงผล (Display) */
+.calculator-display {
+  background-color: transparent;
+  text-align: right;
+  padding: 20px;
+  margin-bottom: 5px;
+}
+
+.history {
+  color: #666;
+  font-size: 0.9rem;
+  min-height: 1.2rem;
+}
+
+.current-value {
+  color: #000;
+  font-size: 3rem; /* ตัวเลขใหญ่สะใจ */
+  font-weight: 600;
+  overflow-x: auto; /* กันเลขล้น */
+  white-space: nowrap;
+}
+
+/* แผงปุ่ม (Keypad) */
+.calculator-keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 คอลัมน์ */
+  gap: 2px;
+}
+
+/* ปุ่มทั่วไป */
+.key-btn {
+  height: 60px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.key-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.key-btn:active {
+  background-color: #d0d0d0;
+}
+
+/* ปุ่มตัวเลข (ให้หนาหน่อย) */
+.key-btn.number {
+  background-color: #fbfbfb;
+  font-weight: bold;
+}
+.key-btn.number:hover {
+  background-color: #fff;
+}
+
+/* ปุ่ม Operator (ด้านขวา / ด้านบน) */
+.key-btn.operator {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* ปุ่มเท่ากับ (=) สีฟ้า */
+.key-btn.equal {
+  background-color: #0067c0;
+  color: white;
+}
+.key-btn.equal:hover {
+  background-color: #005a9e;
+}
+
+/* ปุ่มลบ (C, CE, Backspace) */
+.key-btn.action {
+  background-color: #f9f9f9;
+}

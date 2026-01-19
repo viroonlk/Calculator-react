@@ -1,21 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Calculator from './componens/Calculator'
-import CalculatorAuto from './componens/CalculatorAuto'
+// 1. นำเข้า Component หลักของเครื่องคิดเลข
+// สังเกต path ให้ดีนะครับ ต้องตรงกับที่ไฟล์อยู่จริง
+import CalculatorApp from './componens/calculator/CalculatorApp';
 
+// (Optional) ถ้ามี css กลางของ App สามารถ import ตรงนี้ได้
+import './App.css'; 
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h1>test counter</h1>
+    // 2. จัด Layout หลักของหน้าเว็บ (ถ้าต้องการ)
+    <div className="app-container">
+      
+      {/* (Optional) ใส่หัวข้อโปรเจกต์สักหน่อย */}
+      <h1 style={{ textAlign: 'center', color: '#333' }}>
+        React Calculator Assignment
+      </h1>
 
-      <CalculatorAuto/></>
-
-  )
+      {/* 3. เรียกใช้เครื่องคิดเลข */}
+      <CalculatorApp />
+      
+    </div>
+  );
 }
 
-export default App
+export default App;
