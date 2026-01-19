@@ -1,0 +1,149 @@
+/* จัดหน้าจอและพื้นหลัง */
+.calc-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 80px; /* เว้นระยะจากด้านบน */
+  min-height: 100vh;
+  background-color: #ffffff; /* พื้นหลังหน้าเว็บสีขาว */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+/* การ์ดเครื่องคิดเลข */
+.calc-card {
+  background: white;
+  width: 100%;
+  max-width: 380px;
+  padding: 2.5rem;
+  border-radius: 24px;
+  /* เงา: ปรับให้นูนขึ้นมาชัดเจน เพราะพื้นหลังเป็นสีขาวเหมือนกัน */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0,0,0,0.03); 
+  height: fit-content;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2d3748;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Input และ Select */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+input, select {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 1.1rem;
+  border: 2px solid #edf2f7;
+  border-radius: 12px;
+  background-color: #f7fafc;
+  transition: all 0.2s ease;
+  outline: none;
+  box-sizing: border-box;
+  color: #2d3748;
+}
+
+input::placeholder {
+  color: #cbd5e0;
+}
+
+input:focus, select:focus {
+  border-color: #4facfe;
+  background-color: #fff;
+  box-shadow: 0 0 0 4px rgba(79, 172, 254, 0.1);
+}
+
+/* ปุ่มกด */
+.button-group {
+  margin-top: 2rem;
+  display: flex;
+}
+
+.btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-clear {
+  background-color: #edf2f7;
+  color: #718096;
+}
+
+.btn-clear:hover {
+  background-color: #e2e8f0;
+  color: #4a5568;
+  transform: translateY(-2px);
+}
+
+.btn-clear:active {
+  transform: scale(0.98);
+}
+
+/* พื้นที่แสดงผลลัพธ์ */
+.result-area {
+  margin-top: 2rem;
+  min-height: 80px;
+}
+
+.result-box {
+  background: linear-gradient(135deg, #e6fffa 0%, #b2f5ea 100%);
+  color: #234e52;
+  padding: 20px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  box-shadow: 0 10px 20px rgba(56, 178, 172, 0.15);
+  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.result-value {
+  font-size: 2rem;
+  color: #285e61;
+}
+
+.error-msg {
+  color: #c53030;
+  background-color: #fff5f5;
+  padding: 14px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #feb2b2;
+  font-size: 0.95rem;
+  font-weight: 600;
+  animation: shake 0.4s ease-in-out;
+}
+
+/* Animation เล็กน้อยให้ดูลื่นไหล */
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}

@@ -1,0 +1,113 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+/* จัดกึ่งกลางและใส่พื้นหลังสีครีมอ่อนๆ */
+.container {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdfbf7;
+  padding: 40px;
+  border-radius: 20px;
+  width: 300px;
+  margin: 50px auto;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.title {
+  color: #888;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.count-display {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #555;
+  margin: 20px 0;
+}
+
+/* --- สไตล์ปุ่มหลัก --- */
+.btn {
+  border: none;
+  padding: 12px 24px;
+  margin: 8px;
+  border-radius: 50px; /* ปุ่มทรงแคปซูล */
+  font-size: 1rem;
+  font-weight: bold;
+  color: #555; /* ตัวหนังสือสีเทาเข้มเพื่อให้อ่านง่ายบนพื้นพาสเทล */
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.1); /* เงาปุ่มแบบ 3D นิดๆ */
+}
+
+/* เอฟเฟกต์ตอนเอาเมาส์ชี้ (ลอยขึ้นนิดนึง) */
+.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(0.95);
+}
+
+/* เอฟเฟกต์ตอนกด (ยุบลงไป) */
+.btn:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+/* --- สีพาสเทลแยกตามหน้าที่ --- */
+
+/* ปุ่มเพิ่ม (+1) : สีเขียวมินต์ (Pastel Mint) */
+.btn-inc {
+  background-color: #B5EAD7;
+  color: #4a7c68;
+}
+
+/* ปุ่มลด (-1) : สีแดงอมชมพู (Pastel Salmon) */
+.btn-dec {
+  background-color: #FFB7B2;
+  color: #8f5b57;
+}
+
+/* ปุ่มรีเซ็ต : สีฟ้าอ่อน (Pastel Blue/Periwinkle) */
+.btn-reset {
+  background-color: #C7CEEA;
+  color: #5d637a;
+}
